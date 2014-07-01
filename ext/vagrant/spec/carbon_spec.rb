@@ -23,7 +23,7 @@ describe file('/etc/carbon/carbon.conf') do
   it { should be_owned_by '_graphite' }
 end
 
-describe file('/etc/carbon/storage_schemas') do
+describe file('/etc/carbon/storage-schemas.conf') do
   it { should contain('priority = 100').after('[stats]') }
   it { should be_mode 640 }
   it { should be_owned_by '_graphite' }
